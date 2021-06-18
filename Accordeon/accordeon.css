@@ -1,11 +1,8 @@
 .accordeon {
-  padding: 25px;
-  padding-bottom: 0;
-
   border-bottom: 1px solid #ddd;
 
   box-sizing: border-box;
-  
+
   transition: all 0.3s ease-in-out;
 }
 .accordeon.is--active {
@@ -15,8 +12,8 @@
 .accordeon__header {
   display: flex;
   align-items: center;
-  
-  padding-bottom: 25px;
+
+  padding: 25px;
 
   cursor: pointer;
 }
@@ -34,7 +31,7 @@
 
 .accordeon__button:before,
 .accordeon__button:after {
-  content: '';
+  content: "";
   display: block;
 
   position: absolute;
@@ -50,7 +47,7 @@
   left: 0;
 
   background: black;
-  
+
   transition: all 0.3s ease-in-out;
 }
 .accordeon__button:after {
@@ -61,6 +58,8 @@
 }
 
 .accordeon__content {
+  padding: 0 25px;
+
   overflow: hidden;
 
   transition: all 0.3s ease-in-out;
