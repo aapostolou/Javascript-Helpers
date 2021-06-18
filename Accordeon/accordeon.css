@@ -1,0 +1,67 @@
+.accordeon {
+  padding: 25px;
+  padding-bottom: 0;
+
+  border-bottom: 1px solid #ddd;
+
+  box-sizing: border-box;
+  
+  transition: all 0.3s ease-in-out;
+}
+.accordeon.is--active {
+  padding-bottom: 25px;
+}
+
+.accordeon__header {
+  display: flex;
+  align-items: center;
+  
+  padding-bottom: 25px;
+
+  cursor: pointer;
+}
+
+.accordeon__title {
+  flex: 1;
+}
+
+.accordeon__button {
+  position: relative;
+
+  width: 30px;
+  height: 30px;
+}
+
+.accordeon__button:before,
+.accordeon__button:after {
+  content: '';
+  display: block;
+
+  position: absolute;
+
+  width: 15px;
+  height: 2px;
+
+  margin: auto;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background: black;
+}
+
+.accordeon__button:after {
+  transform: rotate(90deg);
+}
+
+.accordeon__content {
+  overflow: hidden;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.accordeon:not(.is--active) .accordeon__content {
+  max-height: 0 !important;
+}
