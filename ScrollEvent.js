@@ -117,6 +117,8 @@ ScrollEvent.prototype.run = function () {
   } else {
     this.onMoveInside();
   }
+  
+  this.position = currentPosition;
 };
 
 const debugScrollEvents = () => {
